@@ -14,7 +14,10 @@ namespace EmploeesApp.Services
 
         public EmploeesService()
         {
-            configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+            configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
         }
 
         /// <summary>
